@@ -5,6 +5,7 @@ int main()
 {
 
     int temp, dis = 2;
+
     int a[5] = {1, 2, 3, 4, 5};
 
     int sum = 3;
@@ -17,3 +18,4 @@ int main()
     cout << temp;
     return 0;
 }
+
