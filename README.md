@@ -1,2 +1,3 @@
 # DS-Algo
-Smaple problem &amp; solutions 
+
+Sample problem &amp; solutions
