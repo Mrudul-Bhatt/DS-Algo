@@ -34,9 +34,9 @@ Node *deleteX(Node *root, int x)
     if (root == NULL)
         return root;
     if (root->data < x)
-        deleteX(root->right, x);
+        root->right = deleteX(root->right, x);
     else if (root->data > x)
-        deleteX(root->left, x);
+        root->left = deleteX(root->left, x);
     else
     {
         if (root->left == NULL)
