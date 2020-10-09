@@ -35,15 +35,25 @@ bool sudokuRecur(int grid[n][n])
 {
     int i, j;
     for (i = 0; i < n; i++)
+    {
+        bool flag = false;
         for (j = 0; j < n; j++)
+        {
             if (grid[i][j] == 0)
+            {
+                flag = true;
                 break;
+            }
+        }
+        if (flag)
+            break;
+    }
     if (i == n && j == n)
         return true;
     //we have to fill values from 1 to n
     for (int x = 1; x <= n; x++)
     {
-        if (isSafe(grid, x, i, j))
+        if (isSafe(grid, i, j, x))
         {
             grid[i][j] = x;
             if (sudokuRecur(grid) == true)
